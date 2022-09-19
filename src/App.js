@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./App.css";
 import Form from "./Form";
 import Overview from "./Overview";
 import Fiveday from "./fiveDay";
