@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "./styles.css";
+import Form from "./Form";
+import Overview from "./Overview";
+import Fiveday from "./fiveDay";
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container">
+        <div className="row">
+          <Form />
+        </div>
+        <div>
+          <Overview />
+        </div>
+        <div className="row">
+          <Fiveday />
+        </div>
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/carlypaige/SheCodes-git-carly"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Coded by Carly Paige
         </a>
-      </header>
+      </div>
     </div>
   );
 }
-
-export default App;
