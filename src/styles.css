@@ -1,0 +1,40 @@
+.App {
+  font-family: sans-serif;
+}
+.weather-plus-app {
+  padding: 12px;
+  max-width: 600px;
+}
+.city {
+  font-size: 40px;
+  font-weight: 400;
+  color: #5a6275;
+}
+.search-city {
+  margin: 20px 0;
+}
+.current-temp {
+  font-size: 36px;
+  color: #f92c3a;
+}
+.current-time {
+  font-size: 24px;
+  color: #838998;
+}
+.current-wh {
+  color: #5a6275;
+  font-size: 17px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.five-day {
+  color: #838998;
+  font-size: 20px;
+  font-weight: 300;
+}
+.low-high {
+  color: #f92c3a;
+  word-spacing: 12px;
+}
