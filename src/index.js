@@ -13,20 +13,25 @@ root.render(
     <div className="App">
       <div className="container">
         <div className="row">
-          <Form />
-        </div>
-        <div>
-          <Overview />
-        </div>
-        <div className="row">
-          <Fiveday />
+          <div className="col">
+            <Form />
+          </div>
+          <div className="row">
+            <div className="col-4">
+              <Overview />
+            </div>
+            <div className="col-6">
+              <Fiveday />
+            </div>
+          </div>
         </div>
         <a
           href="https://github.com/carlypaige/SheCodes-git-carly"
           target="_blank"
           rel="noopener noreferrer"
+          className="footer"
         >
-          Coded by Carly Paige
+          Open-source code by Carly Paige
         </a>
       </div>
     </div>
