@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Fiveday() {
   return (
-    <div>
-      <ul className="five-day">
+    <div className="five-day">
+      <ul className="five-day-items">
         <li className="list-group-item">
           T<span class="low-high"> 57/76 </span>⛅
         </li>

@@ -11,12 +11,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <div className="App">
-      <div className="row">
+      <div className="row Weather">
         <div className="col">
           <Form />
         </div>
         <div className="row">
-          <div className="col-4">
+          <div className="col-6 ps-0">
             <Overview />
           </div>
           <div className="col-6">

@@ -2,14 +2,10 @@ import React from "react";
 
 export default function Form() {
   return (
-    <div className="search-engine">
+    <div className="form">
       <form className="search-city">
-        <input
-          type="text"
-          placeholder="Enter new city"
-          id="search-city-input"
-        />
-        <input type="submit" value="Search" className="go-button" />
+        <input type="text" placeholder="Enter new city" className="w-75 p-1" />
+        <input type="submit" value="Search" className="btn btn-danger ms-2" />
       </form>
     </div>
   );

@@ -1,18 +1,26 @@
 .App {
-  font-family: sans-serif;
-  padding: 12px;
-  max-width: 600px;
-  display: block;
+  max-width: 500px;
   margin: 0 auto;
 }
+.Weather {
+  font-family: "Manrope", sans-serif;
+  padding: 20px;
+  max-width: 500px;
+  display: block;
+  margin: 30px auto;
+  border: 1px solid #838998;
+  border-radius: 4px;
+  margin-bottom: 0%;
+}
+.search-city {
+  margin-bottom: 20px;
+}
 .city {
-  font-size: 42px;
+  font-size: 44px;
   font-weight: 400;
   color: #5a6275;
 }
-.search-city {
-  margin: 20px 0;
-}
+
 .current-temp {
   font-size: 36px;
   color: #f92c3a;
@@ -22,18 +30,18 @@
   font-size: 24px;
   color: #838998;
 }
-.current-wh {
-  color: #5a6275;
-  font-size: 17px;
-  margin-top: 10px;
-}
 ul {
   list-style: none;
   padding: 0;
 }
-.five-day {
+.current-wh {
+  color: #5a6275;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.five-day-items {
   color: #838998;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 300;
   padding-top: 4px;
 }
