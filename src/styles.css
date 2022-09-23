@@ -1,9 +1,9 @@
 .App {
   max-width: 500px;
   margin: 0 auto;
+  font-family: "Manrope", sans-serif;
 }
 .Weather {
-  font-family: "Manrope", sans-serif;
   padding: 20px;
   max-width: 500px;
   display: block;
