@@ -7,10 +7,7 @@ export default function WeatherInfo(props) {
       <div className="overview col-6">
         <h1 className="city ps-2">{props.data.city}</h1>
         <div className="icon">
-          <img
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt="Weather Icon"
-          />
+          <img src={props.data.iconUrl} alt="Weather Icon" />
           <span className="current-temp">
             {Math.round(props.data.temperature)}°C
           </span>

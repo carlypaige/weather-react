@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <div className="App">
-      <Weather />
+      <Weather defaultCity="Seattle" />
       <a
         href="https://github.com/carlypaige/SheCodes-git-carly"
         target="_blank"
