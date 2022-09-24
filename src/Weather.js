@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
-
+import FiveDay from "./FiveDay";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -40,7 +41,10 @@ export default function Weather(props) {
           />
           <input type="submit" value="Search" className="btn btn-danger ms-2" />
         </form>
-        <WeatherInfo data={weatherData} />
+        <div className="row">
+          <WeatherInfo data={weatherData} />
+          <FiveDay data={weatherData} />
+        </div>
       </div>
     );
   } else {
