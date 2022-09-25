@@ -1,35 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 export default function FiveDay(props) {
-  let apiKey = "d597852c40c3d897fb6c9155c9e167e0";
-  let city = props.data.city;
-  let url = `https://api.openweathermap.org/data/3.0/onecall?q=${city}&appid=${apiKey}&units=imperial`;
-
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
   function handleForecast(response) {
-    console.log(response.data);
+    setForecast(response.data.daily);
+    setLoaded(true);
   }
 
-  axios.get(url).then(handleForecast);
-  return (
-    <div className="col-6 five-day">
-      <ul className="five-day-items">
-        <li className="list-group-item">
-          T<span class="low-high"> 57/76 </span>⛅
-        </li>
-        <li className="list-group-item">
-          W<span className="low-high"> 58/71 </span>⛅
-        </li>
-        <li className="list-group-item">
-          R<span className="low-high"> 58/74 </span>🌧️
-        </li>
-        <li className="list-group-item">
-          F<span className="low-high"> 54/75 </span>☀️
-        </li>
-        <li className="list-group-item">
-          S<span className="low-high"> 57/78 </span>☀️
-        </li>
-      </ul>
-    </div>
-  );
+  if (loaded) {
+    return (
+      <div className="col-6 five-day">
+        <ul className="five-day-items">
+          <li className="list-group-item">
+            {forecast[0].dt}
+            <span class="low-high">
+              {" "}
+              {Math.round(forecast[0].temp.min)}/
+              {Math.round(forecast[0].temp.max)}{" "}
+            </span>
+            {forecast[0].weather[0].icon}
+          </li>
+          <li className="list-group-item">
+            {forecast[1].dt}
+            <span className="low-high">
+              {" "}
+              {Math.round(forecast[1].temp.min)}/
+              {Math.round(forecast[1].temp.max)}{" "}
+            </span>
+            {forecast[0].weather[0].icon}
+          </li>
+          <li className="list-group-item">
+            {forecast[2].dt}
+            <span className="low-high">
+              {" "}
+              {Math.round(forecast[2].temp.min)}/
+              {Math.round(forecast[2].temp.max)}{" "}
+            </span>
+            {forecast[0].weather[0].icon}
+          </li>
+          <li className="list-group-item">
+            {forecast[3].dt}
+            <span className="low-high">
+              {" "}
+              {Math.round(forecast[3].temp.min)}/
+              {Math.round(forecast[3].temp.max)}{" "}
+            </span>
+            {forecast[0].weather[0].icon}
+          </li>
+          <li className="list-group-item">
+            {forecast[4].dt}
+            <span className="low-high">
+              {" "}
+              {Math.round(forecast[4].temp.min)}/
+              {Math.round(forecast[4].temp.max)}{" "}
+            </span>
+            {forecast[0].weather[0].icon}
+          </li>
+        </ul>
+      </div>
+    );
+  } else {
+    let apiKey = "d597852c40c3d897fb6c9155c9e167e0";
+    let latitude = props.data.lat;
+    let longitude = props.data.lon;
+    let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
+    axios.get(url).then(handleForecast);
+    return null;
+  }
 }
