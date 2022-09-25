@@ -4,7 +4,7 @@ import axios from "axios";
 export default function FiveDay(props) {
   let apiKey = "d597852c40c3d897fb6c9155c9e167e0";
   let city = props.data.city;
-  let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&exclude=current,minutely,hourly,alerts&appid=${apiKey}&units=metric`;
+  let url = `https://api.openweathermap.org/data/3.0/onecall?q=${city}&appid=${apiKey}&units=imperial`;
 
   function handleForecast(response) {
     console.log(response.data);

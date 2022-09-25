@@ -9,7 +9,7 @@ export default function WeatherInfo(props) {
         <div className="icon">
           <img src={props.data.iconUrl} alt="Weather Icon" />
           <span className="current-temp">
-            {Math.round(props.data.temperature)}°C
+            {Math.round(props.data.temperature)}°F
           </span>
         </div>
         <div className="current-time ps-2">
