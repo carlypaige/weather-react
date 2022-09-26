@@ -68,6 +68,6 @@ export default function FiveDay(props) {
     let longitude = props.data.lon;
     let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
     axios.get(url).then(handleForecast);
-    return null;
+    return "Loading...";
   }
 }
