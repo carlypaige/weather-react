@@ -44,7 +44,7 @@ export default function Weather(props) {
         </form>
         <div className="row">
           <WeatherInfo data={weatherData} />
-          <FiveDay data={weatherData} />
+          <FiveDay data={[weatherData.coord, weatherData.icon]} />
         </div>
       </div>
     );
