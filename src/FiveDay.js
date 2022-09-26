@@ -63,7 +63,7 @@ export default function FiveDay(props) {
       </div>
     );
   } else {
-    let apiKey = "d597852c40c3d897fb6c9155c9e167e0";
+    let apiKey = "e450bc345a80a08ada69fd5c714d871d";
     let latitude = props.data.lat;
     let longitude = props.data.lon;
     let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
