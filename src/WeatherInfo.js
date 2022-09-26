@@ -8,8 +8,9 @@ export default function WeatherInfo(props) {
       <div className="overview">
         <h1 className="city ps-2">{props.data.city}</h1>
         <div className="icon">
-          <WeatherIcon code={props.data.icon} />
+          <WeatherIcon code={props.data.icon} size={40} />
           <span className="current-temp">
+            {" "}
             {Math.round(props.data.temperature)}°F
           </span>
         </div>

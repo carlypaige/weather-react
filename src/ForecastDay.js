@@ -22,7 +22,7 @@ export default function ForecastDay(props) {
         {" "}
         {minTemp()}/{maxTemp()}{" "}
       </span>
-      <WeatherIcon code={props.data.weather[0].icon} />
+      <WeatherIcon code={props.data.weather[0].icon} size={30} />
     </li>
   );
 }

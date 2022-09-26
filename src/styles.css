@@ -20,9 +20,8 @@
   font-weight: 400;
   color: #5a6275;
 }
-
 .current-temp {
-  font-size: 32px;
+  font-size: 44px;
   color: #f92c3a;
   margin-bottom: 0%;
 }
@@ -41,7 +40,7 @@ ul {
 }
 .five-day-items {
   color: #838998;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 300;
   padding-top: 4px;
 }
